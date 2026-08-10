@@ -1,6 +1,8 @@
 class Solution {
 public:
     void setZeroes(vector<vector<int>>& matrix) {
+        // here, the hard part is yaad rakhna kaun sa space already 0 hogya hai, to avoid counting that zero as fresh zero
+        // we first mark a note in fist iteration that if 0, then this row and col must be 0, in second iteration, convert to zero
         int m= matrix.size();
         int n= matrix[0].size();
         bool firstrow = false;
